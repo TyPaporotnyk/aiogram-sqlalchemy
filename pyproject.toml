@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "aiogram-sqlalchemy"
+version = "0.1.0"
+description = ""
+authors = ["Daniil <39118675+TyPaporotnyk@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "aiogram_sqlalchemy"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiogram = "3.0.0b7"
+sqlalchemy = "^2.0.20"
+asyncpg = "^0.28.0"
+alembic = "^1.12.0"
+python-dotenv = "^1.0.0"
+loguru = "^0.7.0"
+click = "^8.1.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
