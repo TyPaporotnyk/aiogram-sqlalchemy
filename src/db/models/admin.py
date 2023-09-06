@@ -1,8 +1,8 @@
-from sqlalchemy import Boolean, Column, BigInteger
+from sqlalchemy import BigInteger, Boolean, Column
 from sqlalchemy.orm import relationship
 
-from bot.db import Base
-from bot.schemas import AdminSchema
+from src.db import Base
+from src.db.schemas import AdminSchema
 
 
 class Admin(Base):

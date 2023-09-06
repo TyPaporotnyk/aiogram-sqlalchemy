@@ -11,9 +11,8 @@ from alembic import context
 
 sys.path.append(str(pathlib.Path(__file__).resolve().parents[1]))
 
-from bot.config import config as bot_config
-from bot.db import Base
-from bot.models import *
+from src import config as bot_config
+from src.db import Base
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

@@ -1,9 +1,9 @@
 from abc import ABC, abstractmethod
 
-from sqlalchemy import insert, select, update
+from sqlalchemy import insert, select
 from sqlalchemy.exc import NoResultFound
 
-from bot.db.db import async_session_maker
+from src.db.db import async_session_maker
 
 
 class AbstractRepository(ABC):

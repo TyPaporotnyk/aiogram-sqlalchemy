@@ -1,5 +1,5 @@
 from .admin import Admin
-from .author import Author, Speciality, AuthorSpeciality
+from .author import Author, AuthorSpeciality, Speciality
 
 __all__ = [
     "Admin",

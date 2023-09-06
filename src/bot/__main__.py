@@ -4,10 +4,10 @@ from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.redis import RedisStorage
 from aioredis.client import Redis
 
-from config import config
-from bot.utils import logging
-from bot.handlers.admin import router as admin_router
-from bot.handlers.author import router as author_router
+from src.bot.handlers.admin import router as admin_router
+from src.bot.handlers.author import router as author_router
+from src.bot.utils import logging
+from src.config import config
 
 
 async def main():

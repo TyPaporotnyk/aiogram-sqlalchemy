@@ -1,7 +1,7 @@
 from typing import List
 
-from bot.schemas import AdminSchema
-from bot.utils.repository import AbstractRepository
+from src.bot.utils.repository import AbstractRepository
+from src.db.schemas import AdminSchema
 
 
 class AdminService:

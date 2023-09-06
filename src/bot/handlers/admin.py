@@ -1,10 +1,10 @@
 from aiogram import Router
-from aiogram.filters import Command, CommandStart
+from aiogram.filters import CommandStart
 from aiogram.types import Message
 
-from bot.utils.dependencies import get_admin_service
-from bot.filters.admin import AdminFilter
-from bot.keyboards.admin import get_start_keyboard
+from src.bot.filters.admin import AdminFilter
+from src.bot.keyboards.admin import get_start_keyboard
+from src.bot.utils.dependencies import get_admin_service
 
 router = Router(name="admin-router")
 

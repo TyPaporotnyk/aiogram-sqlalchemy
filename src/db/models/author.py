@@ -1,8 +1,17 @@
-from sqlalchemy import Boolean, Column, Integer, String, Float, ForeignKey, PrimaryKeyConstraint, BigInteger
+from sqlalchemy import (
+    BigInteger,
+    Boolean,
+    Column,
+    Float,
+    ForeignKey,
+    Integer,
+    PrimaryKeyConstraint,
+    String,
+)
 from sqlalchemy.orm import relationship
 
-from bot.db import Base
-from bot.schemas import AuthorSchema, SpecialitySchema
+from src.db import Base
+from src.db.schemas import AuthorSchema, SpecialitySchema
 
 
 class AuthorSpeciality(Base):
