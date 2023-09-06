@@ -3,17 +3,21 @@ from aiogram.filters import Command, CommandStart
 from aiogram.types import Message
 
 from bot.utils.dependencies import get_admin_service
+from bot.filters.admin import AdminFilter
+from bot.keyboards.admin import get_start_keyboard
 
 router = Router(name="admin-router")
 
 
-@router.message(CommandStart())
-async def cmd_start(message: Message):
+@router.message(
+    CommandStart(),
+    AdminFilter()
+)
+async def admin_start(message: Message):
     admin_service = get_admin_service()
-    admins = await admin_service.get_admins()
-    print(admins)
+    admin = await admin_service.get_admin(id=message.from_user.id)
+
     await message.answer(
-        "Hi there! This is a simple clicker bot. Tap on green ball, but don't tap on red ones!\n"
-        "If you tap a red ball, you'll have to start over.\n\n"
-        "Enough talk. Just tap /play and have fun!"
+        admin.__str__(),
+        reply_markup=get_start_keyboard()
     )

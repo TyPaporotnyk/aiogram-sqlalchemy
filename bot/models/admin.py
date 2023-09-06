@@ -1,4 +1,5 @@
-from sqlalchemy import Boolean, Column, Integer
+from sqlalchemy import Boolean, Column, BigInteger
+from sqlalchemy.orm import relationship
 
 from bot.db import Base
 from bot.schemas import AdminSchema
@@ -7,8 +8,9 @@ from bot.schemas import AdminSchema
 class Admin(Base):
     __tablename__ = "admin"
 
-    id = Column(Integer, primary_key=True, unique=True, autoincrement=False, index=True)
+    id = Column(BigInteger, primary_key=True, autoincrement=False, index=True)
     is_active = Column(Boolean, default=True)
+    authors = relationship("Author", back_populates="admin")
 
     def to_read_model(self) -> AdminSchema:
         return AdminSchema(

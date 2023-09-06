@@ -15,10 +15,13 @@ services:
       - '5432:5432'
 
   redis:
+    container_name: 'redis'
     image: redis:5-alpine
     restart: on-failure
     volumes:
       - redis-data:/data
+    ports:
+      - '6379:6379'
 
   adminer:
     image: adminer:latest

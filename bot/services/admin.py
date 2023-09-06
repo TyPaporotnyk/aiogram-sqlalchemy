@@ -11,3 +11,7 @@ class AdminService:
     async def get_admins(self) -> List[AdminSchema]:
         admins = await self.admin_repo.find_all()
         return admins
+
+    async def get_admin(self, **filter_by) -> AdminSchema:
+        admin = await self.admin_repo.find_one(**filter_by)
+        return admin
