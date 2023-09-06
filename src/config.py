@@ -12,8 +12,8 @@ class Settings(BaseSettings):
     postgres_password: SecretStr
 
     class Config:
-        env_file = '.env'
-        env_file_encoding = 'utf-8'
+        env_file = ".env"
+        env_file_encoding = "utf-8"
 
 
 config = Settings()

@@ -16,9 +16,7 @@ from src.db.schemas import AuthorSchema, SpecialitySchema
 
 class AuthorSpeciality(Base):
     __tablename__ = "author_speciality"
-    __table_args__ = (
-        PrimaryKeyConstraint('author_id', 'speciality_id'),
-    )
+    __table_args__ = (PrimaryKeyConstraint("author_id", "speciality_id"),)
 
     author_id = Column(BigInteger, ForeignKey("author.id"))
     speciality_id = Column(Integer, ForeignKey("speciality.id"))
