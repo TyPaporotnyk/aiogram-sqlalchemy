@@ -12,3 +12,4 @@ __pycache__/
 
 poetry.lokc
 .env
+.env.loc
