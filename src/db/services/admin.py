@@ -1,6 +1,6 @@
 from typing import List
 
-from src.bot.utils.repository import AbstractRepository
+from src.db.repositories.repository import AbstractRepository
 from src.db.schemas import AdminSchema
 
 

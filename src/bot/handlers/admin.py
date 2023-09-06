@@ -4,7 +4,7 @@ from aiogram.types import Message
 
 from src.bot.filters.admin import AdminFilter
 from src.bot.keyboards.admin import get_start_keyboard
-from src.bot.utils.dependencies import get_admin_service
+from src.db.dependencies import get_admin_service
 
 router = Router(name="admin-router")
 

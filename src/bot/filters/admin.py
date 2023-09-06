@@ -1,7 +1,7 @@
 from aiogram.filters import BaseFilter
 from aiogram.types import Message
 
-from src.bot.utils.dependencies import get_admin_service
+from src.db.dependencies import get_admin_service
 
 
 class AdminFilter(BaseFilter):
